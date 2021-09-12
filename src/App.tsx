@@ -3,7 +3,7 @@ import "./App.css";
 import Contact from "./Components/Contact";
 import Main from "./Components/Main";
 import Menu from "./Components/Menu";
-import Project from "./Components/Project";
+import Work from "./Components/Work";
 
 function App() {
   return (
@@ -11,7 +11,7 @@ function App() {
       <div className='bg'></div>
       <Menu />
       <Main />
-      <Project />
+      <Work />
       <Contact />
     </div>
   );

@@ -3,7 +3,7 @@ import { FC } from "react";
 
 import rosafardasurl from "../media/images/rosa-fardas.png";
 
-const Project: FC = () => {
+const Work: FC = () => {
   return (
     <div className="projects">
       <h1 className="header-font-style">Work</h1>
@@ -54,4 +54,4 @@ const Project: FC = () => {
   );
 };
 
-export default Project;
+export default Work;
