@@ -5,7 +5,7 @@ import rosafardasurl from "../media/images/rosa-fardas.png";
 
 const Work: FC = () => {
   return (
-    <div className="projects">
+    <div id="projects" className="projects">
       <h1 className="header-font-style">Work</h1>
 
       <div className="project">

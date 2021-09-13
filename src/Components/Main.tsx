@@ -2,7 +2,7 @@ import React, { FC } from "react";
 
 const Main: FC = () => {
   return (
-    <div className='hero-section'>
+    <div id="hero-section" className='hero-section'>
       <div className='welcome-section'>
         <h1 className='header-font-style'>Hi, I'm Marco!</h1>
         <br />

@@ -8,7 +8,7 @@ import email from "../media/images/email.svg";
 
 const Contact: FC = () => {
   return (
-    <div className="contact-me">
+    <div id="contact-me" className="contact-me">
       <div className="project">
         <div className="contacts">
           <a
