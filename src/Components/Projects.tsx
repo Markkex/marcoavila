@@ -1,54 +1,48 @@
 import React from "react";
 import { FC } from "react";
 
-import rosafardasurl from "../media/images/rosa-fardas.png";
+export interface Project {
+  id: number;
+  name: string;
+  subName: string;
+  description1: string;
+  description2: string;
+  link1: string;
+  link2: string;
+  image: string;
+}
 
-const Projects: FC = () => {
+export interface Data {
+  data: Project;
+}
+
+const Projects: FC<Data> = ({ data }) => {
   return (
-    <div id="projects" className="projects">
-      <h1 className="header-font-style">Projects</h1>
+    <div className="project">
+      <div className="project-description">
+        <h2>
+          {data.name} <br />
+          {data.subName}
+        </h2>
 
-      <div className="project">
-        <div className="project-description">
-          <h2>
-            Rosa Fardas <br />
-            Comércio de Vestuário, Lda
-          </h2>
-
-          <div className="project-text">
-            <br />
-            <p>
-              Created Landing page and E-Commerce page in Wordpress for an
-              embroidery company in Faro.
-            </p>
-            <br />
-            <p>Created the design and implemented SEO.</p>
-            <br />
-          </div>
-          <div className="project-tile contact">
-            <a
-              className="underline"
-              target="_blank noreferrer"
-              href="https://www.rosafardas.pt/"
-            >
-              Landing Page
-            </a>
-            <a
-              className="underline"
-              target="_blank noreferrer"
-              href="https://www.rosafardas.pt/loja/"
-            >
-              E-Commerce
-            </a>
-          </div>
+        <div className="project-text">
+          <br />
+          <p>{data.description1}</p>
+          <br />
+          <p>{data.description2}</p>
+          <br />
         </div>
-        <div className="image-container">
-          <img
-            className="project-img"
-            src={rosafardasurl}
-            alt="rosa-fardas-development"
-          />
+        <div className="project-tile contact">
+          <a className="underline" target="_blank noreferrer" href={data.link1}>
+            Landing Page
+          </a>
+          <a className="underline" target="_blank noreferrer" href={data.link2}>
+            E-Commerce
+          </a>
         </div>
+      </div>
+      <div className="image-container">
+        <img className="project-img" src={data.image} alt="rosa-fardas" />
       </div>
     </div>
   );
