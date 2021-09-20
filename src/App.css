@@ -155,9 +155,9 @@ li {
   .navbar {
     display: none;
   }
-  
 
-  .menu-icon, .logo-image {
+  .menu-icon,
+  .logo-image {
     display: flex;
     justify-content: space-evenly;
     padding: 1rem;
@@ -166,7 +166,6 @@ li {
   .hero-section {
     display: flex;
     flex-direction: row;
-    padding: 0 10%;
   }
 }
 
@@ -183,7 +182,7 @@ li {
 /*Welcome-section*/
 
 .hero-section {
-  height: 85vh;
+  height: 100vh;
 }
 .welcome-section {
   padding: 5% 10%;
@@ -199,8 +198,6 @@ li {
 }
 
 .welcome-section p {
-  padding-left: 3%;
-  padding-right: 5%;
   padding-bottom: 1rem;
   font-size: 1.2em;
   text-align: left;
@@ -208,13 +205,13 @@ li {
 
 @media (max-width: 50em) {
   .hero-section {
-    height: 100vh;
+    height: 130vh;
   }
 
   .welcome-section,
   .welcome-section h1,
   .welcome-section p {
-    text-align: center;
+    text-align: left;
   }
 }
 
@@ -381,11 +378,40 @@ li {
     order: 2;
   }
 }
+/* Mobile */
+.mobile-headbar {
+  display: flex;
+}
 
-.mobileMenu {
-  width: 100%;
-  height: 100%;
-  display: block;
-  align-content: center;
-  background-color: white;
+.menu-options {
+  display: flex;
+  flex-direction: column;
+  font-size: 3rem;
+  align-items: center;
+  padding: 1.5rem;
+  position: relative;
+  animation-name: movement;
+  animation-duration: 2s;
+}
+
+.menu-effect:hover {
+  font-size: 5rem;
+}
+
+@keyframes movement {
+  from {
+    left: -400px;
+  }
+  to {
+    left: 0px;
+  }
+}
+
+@keyframes hovereffect {
+  from {
+    zoom: 100%;
+  }
+  to {
+    zoom: 200%;
+  }
 }

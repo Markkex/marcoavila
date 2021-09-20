@@ -3,10 +3,10 @@ import { FC } from "react";
 
 import rosafardasurl from "../media/images/rosa-fardas.png";
 
-const Work: FC = () => {
+const Projects: FC = () => {
   return (
     <div id="projects" className="projects">
-      <h1 className="header-font-style">Work</h1>
+      <h1 className="header-font-style">Projects</h1>
 
       <div className="project">
         <div className="project-description">
@@ -54,4 +54,4 @@ const Work: FC = () => {
   );
 };
 
-export default Work;
+export default Projects;

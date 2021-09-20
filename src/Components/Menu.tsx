@@ -1,4 +1,4 @@
-import React, { FC, useState } from "react";
+import React, { FC } from "react";
 import logo from "../media/images/logo.svg";
 import MenuIcon from "@material-ui/icons/Menu";
 interface Validation {
@@ -7,19 +7,19 @@ interface Validation {
 
 const Menu: FC<Validation> = ({ setOpen }) => {
   return (
-    <div id='menu' className='menu sticky'>
-      <div className='logo-image'>
-        <a href='#menu'>
-          <img src={logo} alt='logo' />
+    <div id="menu" className="menu sticky">
+      <div className="logo-image">
+        <a href="#hero-section">
+          <img src={logo} alt="logo" />
         </a>
       </div>
-      <div className='navbar'>
-        <a href='#hero-section'>About Me</a>
-        <a href='#projects'>Work</a>
-        <a href='#contact-me'>Contact Me</a>
+      <div className="navbar">
+        <a href="#hero-section">About Me</a>
+        <a href="#projects">Work</a>
+        <a href="#contact-me">Contact Me</a>
       </div>
       <div className="menu-icon">
-        <MenuIcon fontSize="large" onClick={() => setOpen(true)}/>
+        <MenuIcon fontSize="large" onClick={() => setOpen(true)} />
       </div>
     </div>
   );
