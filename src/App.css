@@ -324,7 +324,7 @@ li {
 .project-description,
 .presentation {
   flex-direction: column;
-  padding: 1.5rem;
+  padding-bottom: 1.5rem;
 }
 .project-description h2 {
   text-align: center;
@@ -351,8 +351,7 @@ li {
 }
 
 .contact-me {
-  padding-top: 5em;
-  padding-bottom: 1.5rem;
+  padding-top: 2rem;
 }
 
 .contact-me img {
@@ -367,6 +366,23 @@ li {
   align-items: center;
 }
 
+
+.form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.form input {
+  width: 100%;
+  height: 2rem;
+  border-radius: 4px;
+  color: black;
+}
+.form textarea {
+  color:black;
+}
 @media (max-width: 50em) {
   .presentation {
     width: 100%;

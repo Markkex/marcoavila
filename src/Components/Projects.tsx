@@ -4,12 +4,14 @@ import { FC } from "react";
 export interface Project {
   id: number;
   name: string;
-  subName: string;
+  subName?: string;
   description1: string;
-  description2: string;
+  description2?: string;
   link1: string;
-  link2: string;
-  image: string;
+  link2?: string;
+  image?: string;
+  option1: string;
+  option2?: string;
 }
 
 export interface Data {
@@ -18,32 +20,45 @@ export interface Data {
 
 const Projects: FC<Data> = ({ data }) => {
   return (
-    <div className="project">
-      <div className="project-description">
+    <div className='project'>
+      <div className='project-description'>
         <h2>
           {data.name} <br />
-          {data.subName}
+          {data.subName && <p>{data.subName}</p>}
         </h2>
-
-        <div className="project-text">
+        <div className='project-text'>
           <br />
           <p>{data.description1}</p>
           <br />
           <p>{data.description2}</p>
           <br />
         </div>
-        <div className="project-tile contact">
-          <a className="underline" target="_blank noreferrer" href={data.link1}>
-            Landing Page
-          </a>
-          <a className="underline" target="_blank noreferrer" href={data.link2}>
-            E-Commerce
-          </a>
+        <div className='project-tile contact'>
+          {data.link1 && (
+            <a
+              className='underline'
+              target='_blank noreferrer'
+              href={data.link1}
+            >
+              {data.option1}
+            </a>
+          )}
+          {data.link2 && (
+            <a
+              className='underline'
+              target='_blank noreferrer'
+              href={data.link2}
+            >
+              {data.option2}
+            </a>
+          )}
         </div>
       </div>
-      <div className="image-container">
-        <img className="project-img" src={data.image} alt="rosa-fardas" />
-      </div>
+      {data.image && (
+        <div className='image-container'>
+          <img className='project-img' src={data.image} alt={data.name} />
+        </div>
+      )}
     </div>
   );
 };
